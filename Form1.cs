@@ -24,27 +24,42 @@ namespace Algoritm_samples
 
             if (e.KeyCode == Keys.Right)
             {
-                x += 5;
+                if (pictureBox1.Right <= label4.Left)
+                {
+                    x += 5;
+                }
             }
 
             if (e.KeyCode == Keys.Left)
             {
-                x -= 5;
+                if (pictureBox1.Left >= label2.Right)
+                {
+                    x -= 5;
+                }
+               
             }
 
             if (e.KeyCode == Keys.Up)
             {
-                y -= 5;
+                if (y >= label1.Bottom)  
+                {
+                    y -= 5;
+                }
+               
             }
 
             if (e.KeyCode == Keys.Down)
             {
-                y += 5;
+                if (pictureBox1.Bottom <= 395) 
+                {
+                    y += 5;
+                }
             }
 
             if (pictureBox1.Right >= label4.Left)
             {
                 label4.BackColor = Color.Red;
+
             }
 
             if (pictureBox1.Left <= label2.Right)
@@ -67,5 +82,6 @@ namespace Algoritm_samples
         }
 
         
+
     }
 }
